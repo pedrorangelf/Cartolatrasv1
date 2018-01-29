@@ -1,21 +1,39 @@
 <ion-header>
-  <ion-navbar color="primary">
-    <button ion-button menuToggle>
-      <ion-icon name="menu"></ion-icon>
-    </button>
-    <ion-title>Home</ion-title>
-  </ion-navbar>
-</ion-header>
-
-<ion-content padding>
-  <ion-list>
-    <ion-item>
-      <ion-thumbnail item-start>
-        <img src="img/thumbnail-totoro.png">
-      </ion-thumbnail>
-      <h2>Liga Brooklyn</h2>
-      <!-- <p>Hayao Miyazaki • 1988</p> -->
-      <button ion-button clear item-end>View</button>
-    </ion-item>
-  </ion-list>
-</ion-content>
+    <ion-navbar color="primary">
+      <button ion-button menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+      <ion-buttons end>
+          <button ion-button icon-only >
+            <ion-icon name="add-circle"></ion-icon>
+          </button>
+        </ion-buttons>
+      <ion-title>Ligas</ion-title>
+    </ion-navbar>
+  </ion-header>
+  
+  <ion-content padding>
+  
+      <ion-list>
+          <ion-item>
+            <ion-thumbnail item-start>
+              <img src="data:image/png;base64,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">
+            </ion-thumbnail>
+            <h2>Liga do Brooklyn</h2>
+            <p>Início: 02/02/2011</p>
+            <button ion-button clear item-end>View</button>
+          </ion-item>
+          <ion-item>
+              <ion-thumbnail item-start>
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADgCAMAAADCMfHtAAAAZlBMVEWRkZFvb2////+Pj4+Li4uTk5NkZGSJiYlwcHDl5eVsbGxoaGi7u7t8fHzo6OiBgYH4+Pjb29vCwsKdnZ2qqqrw8PC3t7fR0dGjo6Py8vJ3d3ezs7PBwcHU1NSnp6eZmZlcXFxTU1NjqmYOAAAKkUlEQVR4nO2diZazKBCFVUAU4xqNxixm3v8lByhcQ9KdmWzS3DPza9tq+KQooArTjmNlZWVlZWVlZWVlZWVlZWX1kMhEny7L00UEH03TNObiG+qYx4jSgLlCjMtlbvzpAj1bRPG5biD/c1lsWi26S5lGiGTFTRUQo9oiaZd8LqMmAV4T8oaYWsJViSxbIZdphMzwOnTQVSW2hvlSEpttpBpXY5qRapypaWMaS7h+/UXC1hKuTH+AUDemMUp/kTCwhCvTXyR0TSO8AnQNC+1rCI2aADuaiLBhhERDiD5dqKfKfEIHaQiNslIt4afL9FxpCPGny/RcXRMy8wnpp8v0ZBlvpZoxjWGexvw6NN/T4OvsmmFZbmp6/pDQ63ZoGGF6VYeGhfVJfE1oVjhRsxbDsECNbi2GSdMnopsAu65RA1PN5MksZ6rpDs1yNYSkujo0ydVoXalRswuiM9LAoHEbuR53G9YQbzRDN/h0wZ4mfTMM+BTRmErUVyHvET9dsCdJ3xua1BCvV172Yp8u2rN0C9CYgduNvsIcM71tpNxMjZhBaeeGPaEJZnrbkwoFBqxX0IVoJpVoQqd/x0jdL4y4bbnUpKcT+92dc4k4YXvXSLneUuzfi3hcR5lxwCexn9/OPqBCnJDc5/u64L4k9M6iFnH9E+FREvo/IH5ZlwiEmXhxeUl4VVAgDP3hxVh3fMty0jYZgov1oG/HB0Ivwcs6RELzc0dCeLuZb6JIve3c74j9GOH5tepWYkOGQxi/J+ahCL2azggR3e6KYrOls4KOdUi52shHh03ZMjeKyG6zBUbms+5YFLvxUkRL/jPBXcMFBzHih4oSvyPj2BN6OzwSEtwkcLQqJ4UYCFksdpouk+dsL2c4l7MGEcm94VJZYbiE04pS/CuDxqjun+sb6nEg9LZ0IMTH4aio3BuEp+HhqG3Of3Mer/Q24ung/rde3hOS/XDKvns54kiYDYSonBTT2wxlWBBeq+VGKisMas3jxUfN/BROiJPJz9UbCb28J8TwjPcVHL9DmM23Dm+SR6+gUdrJawvkYDDarBoI0UYe2HVy6x1fjUgmJcyAUFXhkSoD2w0uY0GYpC5UR82o3G65r2ljP6Wk26mnReRNE0K3e0VI5TWHlKZyAFG92tsA4cQsc4xh6MLtiYZi79SXYUkYs0iCJD7zE0XI2Ga00xA7YKSjufK7ym3IBY/n3jDxeYTdYUp46rkWY4AFYRW5QFhH7kAYTBtZqOwhk/4lA8KtN9f2LYTKjyrC0ac+TBjJp5Ns6v23ESIwSMkDIBkfgIDLqR8gZHBG5MtfhBR18qYHjHBvpVhui53Qgf//6mEc6Z8j2veEDpQqKUugbvpzfyaMUnmLi3+BznKjHpJXNNA8BaG8a849zTY7HdDLhzV9HTrqacveoh+WeGBqvydkAVxSD48LHb2ZeG8Bg4L9CZ5f+Z7eQsyBcdkTOiiblGm0ol8Q+sPDyfrHNXU90OMXk59P76tD3jcUAyEZilVNhlXD/BAI97p22KqHA6NQeTPVwnfK08wQ69ePvUklBH0Szaukkp+J8CHkBcrC3XRojA4JF+dx44rv5Lz3K8WRI0c98W1F+JGg2PPrtj6tMwWQHvh9665TdchtAm/rKhOG2uA3TBjFPKh/kHjYJ3yKR4gzG/oT0vpckZgj9Tus34nEjpw+RawNIsb4jYgjLz8h8RnQH1UwjueTQ3479KYZ4u91LxI8Sn3pSaz4UOJlRdNtocM9jrHGL6C7jmL8EGTTRmtCb6KXD0L/n+7Hupdi6glNCfevHoP+T91LyGgIlT3SzdD11F9gmPelX0NzS32KhvvlOg/zeud8t4k6v3U0g8boPkIUvyuy9r/0kKNZ44vPjzka9+vyFz9Lt7L7ntb3+sVjrnSN2eDpOijG+rC+2uoI4+u0wNWRd4oPFe/7u4kr5dVDwGplBkaLyHBXluW0GlHDD5Qf6/TRMQnD5HAPcSx9JKdRReTChFebboP51GR+S2BivflULWIVOrp9xqSziDY9YXabMFwQOp8l7IPvd5wDXjchVtHE+eeT6d6kOxytdEIYzNKkc0JIQs0J3+xpsRoeJ5DRFzNWpPak/+F+KA3aC0x/efH/4fL5hH5ah8y/sNZV8+CBkOJOebAFIaaIOBS/aQ3VmG0Srg4lVVXtZW5f7OWID55zyD8coI84VElS7WZ1GLklnJNv/ZHw3IhNeMZLQtydxNlZ3rxlYEBkIF+ETmQqCML6BVat84jPY8IvE32Eph2yaeqDDYR9zEmkEieEBG+Gs2v8DoOV4cM6VGYKEc2QquUlBE0D8fufCb3a7wkHndGUcAJ4d/XH8wBl8c7Sf4jAIpUG5EB4OpQh4iw/bKFYZaT1pWzv7YumAY/FK3pBmOAJoYo+JzUELe/2ws8RfDbdKuNUZtogJ4MioaZGaXD5Rz6Ik54wKssL1z/yVueBMD+XkBzdTghVxielqTyUvOGNMFHQnFLR3ESwCOq0gGSKtCpSc58DSeLQ1/eHPhXnSFP3NpEizCnCUGFHNCGEDDEfw0HM/+XtEMns4Q7Bo216Mw1lEDxcrFy4RRjVk3MGQtEfQiqmxiMhmWYNPLUk65WaZ2Lq3kwzmXETRgrZ7uwOYeDX03PmhPL2pynhHPD1hPMP3AvXBq5HlNdRNeptL355k5DJtFrSXiBFOhLym1GwSUUoVgVA5kdkBsRwP0lenSRFO2+mwUxFYXmfAfnEsGW+bJdZzBaE9BJE8ldnn13AifS9xb5T4Xxem0BYp0itDyhiStOiEX/948VSKcuCK5yZaW9UfR5XJftzf0HoVRXAV6Rf7XSI+t5CDRayYeFJxR8h3Kk+yxxs+PIUIgB0YgYMWXc8GcaJbyGn/WIYRRgNhEy1u8xt53ZwYIv+kA9qhqfGfdrsl6+eFMMKHpUUysCghqG4MNIRN9ss6jDqR2XU791teJrUYdg7zRMfmqF+RZhYzTbmTbPzqwff0DnVMFwEgx3NFMbJ+ADLY1omzg39YfbkMrC8PVZtkx+UKxF2kZzj54000uwox56q08kKTBxcKPgTef2IRi7elo+ROF0jfpD7w54jMmGHYkd9PrFoDmc+UWxTLhmZinB5aFIx44ja5tC0IkHMj8Tcu6ZO0yFUHo9ln0nD3a7YnAnM0NB5UxxL8p5x9yQENu7Pl9AiBOFSFg0xNjUrVEfGPbGVm3h58+uP+qZQ/8Mh79W95WUJNfq6d0vuyxKun9CxhKsnNN9KLaEl/H5Zwj9KuCpES6gl/HShH5IlNIDwzheaWMJ1yBL+ScIv+3KFn2QJLeEKZD7hg0v1LeEXyhJawu/X44Rrey/IEv5Jwk8X+UFZwtUTEuPbofmE1pfqCD9d5AdlCS3h98t4T2N+b/FfCD9d5kf1MOHqvlXBEq6ckPyHdrgywv8Q814boel1+PBXDP0JwrX1hyRmjzGylWW5HUfz93GNqkJE48eqMPimN35+IQH4EGHQxvSrXmv6URyxHRh/wxq0bUpXhSggaRq37bwuNb0kA744XVklipEbEStGxZ+mEF/vkuolv6wUYwG3Nl86iPwo+QVZq+UT+rH0ZL31Z2VlZWVlZWVlZWVlZWVlZWX1W/0LbxajH9oiNLoAAAAASUVORK5CYII=">
+              </ion-thumbnail>
+              <h2>Liga do Brooklyn</h2>
+              <p>Início: 02/02/2011</p>
+              <button ion-button clear item-end>View</button>
+            </ion-item>
+        </ion-list>
+  </ion-content>
+  
+  
+  
+  
