@@ -1,0 +1,39 @@
+
+<ion-header>
+
+  <ion-navbar text-center color="primary">
+    <ion-title>Cartólatras</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+    <h1 text-center color="primary">
+    <img src="../../assets/icon/top-hat.svg" width="70em" height="70em"><br/>
+    <img src="../../assets/icon/beer2.svg" width="60em" height="60em"> 
+  </h1>
+
+
+  <form [formGroup]="signinForm" (ngSubmit)="logar(); $event.preventDefault()">
+    <ion-list>
+
+      <ion-item>
+        <ion-icon name="ios-mail-outline" item-left color="primary"></ion-icon>
+        <ion-input placeholder="E-mail" type="email" formControlName="email"></ion-input>
+      </ion-item>
+
+      <ion-item>
+          <ion-icon name="ios-lock-outline" item-left color="primary"></ion-icon>
+        <ion-input placeholder="Senha" type="password" formControlName="senha"></ion-input>
+      </ion-item>
+
+    </ion-list>
+
+    <button ion-button block type="submit" [disabled]="signinForm.invalid">Entrar</button>
+
+  </form>
+
+  <button ion-button block clear text-center (click)="onSignup()">Cadastre-se</button>
+</ion-content>
