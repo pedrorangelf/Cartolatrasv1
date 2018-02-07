@@ -59,6 +59,10 @@ export class MyApp {
     return loading;
   }
 
+gotoSelecionarLiga(){
+  this.nav.setRoot(HomePage).then(() => this.menu.close());
+}
+
   logout(){
 
     let loading: Loading = this.showLoading();

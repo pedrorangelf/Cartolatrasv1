@@ -14,31 +14,38 @@
 
 
 <ion-content padding>
+  <h1 text-center color="primary">
+    <img src="../../assets/icon/bricks.svg" width="130em" height="90em">
+  </h1>
   <ion-item>
-    <ion-label>Chapou - {{rBebeu}} pontos</ion-label>
-    <ion-checkbox color="dark" checked="false" (ionChange)="datachanged($event)"></ion-checkbox>
-    <ion-note item-end>
-      {{qtdeBeijin}}x
-    </ion-note>
-    <button ion-button clear item-end icon-only (click)="addBeijin($event)">
-      <ion-icon color="dark" name="add-circle"></ion-icon>
-    </button>
-    <button ion-button clear item-end icon-only (click)="removeBeijin($event)">
-        <ion-icon color="dark" name="remove-circle"></ion-icon>
-    </button>
+    <ion-label>Chapou - {{rBebeu}} pt</ion-label>
+    <ion-checkbox checked="false" [(ngModel)]="pontos.cBebeu"></ion-checkbox>
   </ion-item>
   <ion-item>
-    <ion-label>Pegou - {{rPegou}} pontos</ion-label>
-    <ion-checkbox color="dark" checked="false" (ionChange)="datachanged($event)"></ion-checkbox>
+    <ion-label>Pegou (6 baixo) - {{rPegouB}} pt</ion-label>
+    <ion-checkbox checked="false" [(ngModel)]="pontos.cPegouB"></ion-checkbox>
     <ion-note item-end min="0">
-      {{qtdeBeijin}}x
+      {{qtderPegouB}}x
     </ion-note>
-    <button ion-button clear item-end icon-only (click)="addBeijin($event)">
-      <ion-icon color="dark" name="add-circle"></ion-icon>
+    <button ion-button clear item-end icon-only (click)="addrPegouB($event)">
+      <ion-icon name="add-circle"></ion-icon>
     </button>
-    <button ion-button clear item-end icon-only (click)="removeBeijin($event)">
-        <ion-icon color="dark" name="remove-circle"></ion-icon>
+    <button ion-button clear item-end icon-only (click)="removerPegouB($event)">
+      <ion-icon name="remove-circle"></ion-icon>
     </button>
   </ion-item>
-  <button ion-button block color="secondary" (click)="pontuar()">Salvar</button>
+  <ion-item>
+    <ion-label>Pegou (6 alto) - {{rPegouA}} pt</ion-label>
+    <ion-checkbox checked="false" [(ngModel)]="pontos.cPegouA"></ion-checkbox>
+    <ion-note item-end min="0">
+      {{qtderPegouA}}x
+    </ion-note>
+    <button ion-button clear item-end icon-only (click)="addrPegouA($event)">
+      <ion-icon name="add-circle"></ion-icon>
+    </button>
+    <button ion-button clear item-end icon-only (click)="removerPegouA($event)">
+      <ion-icon name="remove-circle"></ion-icon>
+    </button>
+  </ion-item>
+  <button ion-button block color="secondary" (click)="pontuar(pontos)">Salvar</button>
 </ion-content>
