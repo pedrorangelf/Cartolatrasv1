@@ -17,6 +17,14 @@ import { UserService } from '../providers/user/user.service';
 import { AuthService } from '../providers/auth/auth.service';
 import { SigninPage } from '../pages/signin/signin';
 import { SignupPage } from '../pages/signup/signup';
+import { LigaService } from '../providers/liga/liga.service';
+import { NovaligaPage } from '../pages/novaliga/novaliga';
+import { LigaDetailPage } from '../pages/liga-detail/liga-detail';
+import { ParticipanteService } from '../providers/participante/participante.service';
+import { EntrarLigaPage } from '../pages/entrar-liga/entrar-liga';
+import { InsertSecretPage } from '../pages/insert-secret/insert-secret';
+import { InfoGeraisPage } from '../pages/info-gerais/info-gerais';
+import { PontuarPage } from '../pages/pontuar/pontuar';
 
 @NgModule({
   declarations: [
@@ -24,7 +32,13 @@ import { SignupPage } from '../pages/signup/signup';
     HomePage,
     ListPage,
     SigninPage,
-    SignupPage
+    SignupPage,
+    NovaligaPage,
+    LigaDetailPage,
+    EntrarLigaPage,
+    InsertSecretPage,
+    InfoGeraisPage,
+    PontuarPage
   ],
   imports: [
     BrowserModule,
@@ -40,13 +54,21 @@ import { SignupPage } from '../pages/signup/signup';
     HomePage,
     ListPage,
     SigninPage,
-    SignupPage
+    SignupPage,
+    NovaligaPage,
+    LigaDetailPage,
+    EntrarLigaPage,
+    InsertSecretPage,
+    InfoGeraisPage,
+    PontuarPage
   ],
   providers: [
     AuthService,
     StatusBar,
     SplashScreen,
-    UserService,   
+    UserService, 
+    LigaService, 
+    ParticipanteService, 
     {provide: ErrorHandler, useClass: IonicErrorHandler}  
   ]
 })

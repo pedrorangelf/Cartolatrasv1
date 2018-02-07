@@ -7,6 +7,8 @@ import { HomePage } from '../pages/home/home';
 import { ListPage } from '../pages/list/list';
 import { AuthService } from '../providers/auth/auth.service';
 import { SigninPage } from '../pages/signin/signin';
+import { AngularFireList } from 'angularfire2/database';
+import { InfoGeraisPage } from '../pages/info-gerais/info-gerais';
 
 @Component({
   templateUrl: 'app.html'
@@ -15,6 +17,7 @@ export class MyApp {
   @ViewChild(Nav) nav: Nav;
 
   rootPage: any = SigninPage;
+  user: AngularFireList<any>;
 
   pages: Array<{title: string, component: any}>;
 
@@ -23,8 +26,10 @@ export class MyApp {
 
     // used for an example of ngFor and navigation
     this.pages = [
-      { title: 'Home', component: HomePage },
-      { title: 'List', component: ListPage }
+      {title: 'Inicio', component: InfoGeraisPage},  
+      { title: 'List', component: ListPage },
+      { title: 'Selecionar Liga', component: HomePage }
+     
     ];
 
   }
