@@ -9,6 +9,7 @@ import { AuthService } from '../providers/auth/auth.service';
 import { SigninPage } from '../pages/signin/signin';
 import { AngularFireList } from 'angularfire2/database';
 import { InfoGeraisPage } from '../pages/info-gerais/info-gerais';
+import { ConfiguracoesPage } from '../pages/configuracoes/configuracoes';
 
 @Component({
   templateUrl: 'app.html'
@@ -61,6 +62,9 @@ export class MyApp {
 
 gotoSelecionarLiga(){
   this.nav.setRoot(HomePage).then(() => this.menu.close());
+}
+gotoConfig(){
+  this.nav.setRoot(ConfiguracoesPage).then(() => this.menu.close());
 }
 
   logout(){

@@ -27,4 +27,8 @@ create(liga: Liga){
                 .set(liga);
 }
 
+remover(idliga){
+  return this.af.object('/ligas/' + idliga).remove();
+}
+
 }

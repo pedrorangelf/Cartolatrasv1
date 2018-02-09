@@ -6,7 +6,6 @@ import { NovaligaPage } from '../novaliga/novaliga';
 import { Observable } from 'rxjs/Observable';
 import { LigaService } from '../../providers/liga/liga.service';
 import { LigaDetailPage } from '../liga-detail/liga-detail';
-import { EntrarLigaPage } from '../entrar-liga/entrar-liga';
 import { InsertSecretPage } from '../insert-secret/insert-secret';
 
 

@@ -15,7 +15,7 @@
 
 <ion-content padding>
   <h1 text-center>
-    <img src="../../assets/icon/computer-game.svg" width="90em" height="90em">
+    <img src="assets/icon/computer-game.svg" width="90em" height="90em">
   </h1>
   <form [formGroup]="ligaForm" (ngSubmit)="criarLiga(); $event.preventDefault()">
     <ion-list>
@@ -26,7 +26,7 @@
       </ion-item>
 
       <ion-item>
-          <ion-label floating>Apelo de Liga</ion-label>
+          <ion-label floating>Apelido de Liga</ion-label>
           <ion-input type="text" value="" formControlName="apelido"></ion-input>
         </ion-item>
         <br/>

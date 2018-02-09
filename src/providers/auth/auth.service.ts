@@ -19,4 +19,12 @@ export class AuthService {
   logout(){
     return this.auth.auth.signOut();
   }
+
+  recuperarsenha(){
+    return this.auth.auth.sendPasswordResetEmail(this.auth.auth.currentUser.email)
+  }
+
+  alterarsenha(senha){
+    return this.auth.auth.currentUser.updatePassword(senha);
+  }
 }

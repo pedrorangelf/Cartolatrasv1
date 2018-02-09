@@ -15,26 +15,66 @@
 
 <ion-content padding>
   <h1 text-center color="primary">
-    <img src="../../assets/icon/bricks.svg" width="130em" height="90em">
+    <img src="assets/icon/bricks.svg" width="130em" height="90em">
   </h1>
   <ion-item>
     <ion-label>Chapou - {{rBebeu}} pt</ion-label>
     <ion-checkbox checked="false" [(ngModel)]="pontos.cBebeu"></ion-checkbox>
   </ion-item>
   <ion-item>
-    <ion-label>Pegou (6 baixo) - {{rPegouB}} pt</ion-label>
+    <ion-label>Role - {{rRole}} pt</ion-label>
+    <ion-checkbox checked="false" [(ngModel)]="pontos.cRole"></ion-checkbox>
+  </ion-item>
+  <ion-item>
+    <ion-label>Anfitrião - {{rAnfitriao}} pt</ion-label>
+    <ion-checkbox checked="false" [(ngModel)]="pontos.cAnfitriao"></ion-checkbox>
+  </ion-item>
+  <ion-item>
+      <ion-label>Shot - {{rShot}} pt</ion-label>
+      <ion-checkbox checked="false" [(ngModel)]="pontos.cShot"></ion-checkbox>
+      <ion-note item-end min="0">
+          {{qtderShot}}x
+        </ion-note>
+        <button ion-button clear item-end icon-only (click)="removerShot($event)">
+          <ion-icon name="remove-circle"></ion-icon>
+        </button>
+        <button ion-button clear item-end icon-only (click)="addrShot($event)">
+          <ion-icon name="add-circle"></ion-icon>
+        </button>
+    </ion-item>
+  <ion-item>
+    <ion-label>Beijinho - {{rPegouB}} pt</ion-label>
     <ion-checkbox checked="false" [(ngModel)]="pontos.cPegouB"></ion-checkbox>
     <ion-note item-end min="0">
       {{qtderPegouB}}x
     </ion-note>
-    <button ion-button clear item-end icon-only (click)="addrPegouB($event)">
-      <ion-icon name="add-circle"></ion-icon>
-    </button>
     <button ion-button clear item-end icon-only (click)="removerPegouB($event)">
       <ion-icon name="remove-circle"></ion-icon>
     </button>
+    <button ion-button clear item-end icon-only (click)="addrPegouB($event)">
+      <ion-icon name="add-circle"></ion-icon>
+    </button>
   </ion-item>
   <ion-item>
+    <ion-label>Sexo - {{rSexo}} pt</ion-label>
+    <ion-checkbox checked="false" [(ngModel)]="pontos.cSexo"></ion-checkbox>
+    <ion-note item-end min="0">
+      {{qtderSexo}}x
+    </ion-note>
+    <button ion-button clear item-end icon-only (click)="removerSexo($event)">
+      <ion-icon name="remove-circle"></ion-icon>
+    </button>
+    <button ion-button clear item-end icon-only (click)="addrSexo($event)">
+      <ion-icon name="add-circle"></ion-icon>
+    </button>
+  </ion-item>
+  <ion-item>
+    <ion-label>PTzão - zera os pontos</ion-label>
+    <ion-checkbox checked="false" [(ngModel)]="pontos.cPete"></ion-checkbox>
+  </ion-item>
+
+
+  <!-- <ion-item>
     <ion-label>Pegou (6 alto) - {{rPegouA}} pt</ion-label>
     <ion-checkbox checked="false" [(ngModel)]="pontos.cPegouA"></ion-checkbox>
     <ion-note item-end min="0">
@@ -46,6 +86,6 @@
     <button ion-button clear item-end icon-only (click)="removerPegouA($event)">
       <ion-icon name="remove-circle"></ion-icon>
     </button>
-  </ion-item>
+  </ion-item> -->
   <button ion-button block color="secondary" (click)="pontuar(pontos)">Salvar</button>
 </ion-content>

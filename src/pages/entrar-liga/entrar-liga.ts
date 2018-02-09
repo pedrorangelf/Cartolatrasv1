@@ -12,7 +12,6 @@ import { FormBuilder, FormGroup, Validators } from "@angular/forms";
 import { ParticipanteService } from "../../providers/participante/participante.service";
 import { Observable } from "rxjs/Observable";
 import { Participante } from "../../models/participante.model";
-import { HomePage } from '../home/home';
 import { LigaDetailPage } from '../liga-detail/liga-detail';
 
 @Component({
@@ -41,8 +40,6 @@ export class EntrarLigaPage {
     });
     let codigosecreto = this.navParams.get("codigosecreto");
     this.codigosecreto = codigosecreto;
-
-    console.log(this.codigosecreto);
 
     this.liga = this.ligaService.listbyCodFirst(codigosecreto).valueChanges();
   }
@@ -82,8 +79,6 @@ export class EntrarLigaPage {
     let loading: Loading = this.showLoading();
     let formLiga = this.ligaForm.value;
 
-    console.log(this.codigosecreto);
-
     this.nomeliga = document.getElementById("nomeliga").innerText;
     let participante: Participante = new Participante(
       this.participanteService.af.createPushId(),
@@ -94,11 +89,8 @@ export class EntrarLigaPage {
       this.codigosecreto
     );
 
-     this.participanteService.create(participante).then(() => loading.dismiss().then(() => { this.presentToast();},
-                                                                        error => {console.log(error); } 
-                                                                      )
+     this.participanteService.create(participante).then(() => loading.dismiss().then(() => { this.presentToast();})
                                           ).catch((error: Error) => {
-                                            console.log(error);
                                             loading.dismiss();
                                             this.showAlert(error.message);
                                           });

@@ -13,16 +13,19 @@
   </ion-header>
   
   <ion-content padding>
-      <button ion-button block color="secondary" (click)="gotoNovaLiga()">Nova Liga</button>
+      <h1 text-center>
+          <img src="assets/icon/team.svg" width="90em" height="90em">
+      </h1>
       <ion-list>
           <ion-item *ngFor="let liga of ligas | async" (click)="getLigaDetail(liga)">
             <ion-thumbnail item-start>
-                <img src="../../assets/icon/beer3.svg" width="60em" height="60em">
+                <img src="assets/icon/beernbotle.svg" width="60em" height="60em">
             </ion-thumbnail>
             <h2>{{liga.nomeliga}}</h2>
             <!-- <p>Início: {{liga.datacriacao}}</p> -->
           </ion-item>
         </ion-list>
+        <button ion-button block color="secondary" (click)="gotoNovaLiga()">Nova Liga</button>
         <button ion-button block outline (click)="gotoEntrarLiga()">Entrar Em Uma Liga</button>
   </ion-content>
   

@@ -1,4 +1,4 @@
-import { DateTime } from "ionic-angular/components/datetime/datetime";
+
 
 export class Liga{
     constructor(

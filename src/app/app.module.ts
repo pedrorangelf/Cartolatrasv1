@@ -25,6 +25,7 @@ import { EntrarLigaPage } from '../pages/entrar-liga/entrar-liga';
 import { InsertSecretPage } from '../pages/insert-secret/insert-secret';
 import { InfoGeraisPage } from '../pages/info-gerais/info-gerais';
 import { PontuarPage } from '../pages/pontuar/pontuar';
+import { ConfiguracoesPage } from '../pages/configuracoes/configuracoes';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,8 @@ import { PontuarPage } from '../pages/pontuar/pontuar';
     EntrarLigaPage,
     InsertSecretPage,
     InfoGeraisPage,
-    PontuarPage
+    PontuarPage,
+    ConfiguracoesPage
   ],
   imports: [
     BrowserModule,
@@ -60,7 +62,8 @@ import { PontuarPage } from '../pages/pontuar/pontuar';
     EntrarLigaPage,
     InsertSecretPage,
     InfoGeraisPage,
-    PontuarPage
+    PontuarPage,
+    ConfiguracoesPage
   ],
   providers: [
     AuthService,

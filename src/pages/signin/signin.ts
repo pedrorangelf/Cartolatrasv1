@@ -34,11 +34,20 @@ logar(){
 let loading: Loading = this.showLoading();
   
   this.authService.signInWithEmail(this.signinForm.value).then(() => {loading.dismiss().then(() => {this.navCtrl.setRoot(HomePage)})})
-                                                         .catch((error: Error) => { console.log(error);
+                                                         .catch((error: Error) => { 
                                                                                     loading.dismiss();
                                                                                     this.showAlert(error.message);});
                                                          
 }
+
+// signInWithFacebook(){
+//   let loading: Loading = this.showLoading();
+
+//   this.authService.signInWithFacebook().then(() => {loading.dismiss().then(() => {this.navCtrl.setRoot(HomePage)})})
+//                                                          .catch((error: Error) => { 
+//                                                                                     loading.dismiss();
+//                                                                                     this.showAlert(error.message);});
+// }
 
 onSignup(){
   this.navCtrl.push(SignupPage);

@@ -12,7 +12,6 @@ import { LigaService } from "../../providers/liga/liga.service";
 import { ParticipanteService } from '../../providers/participante/participante.service';
 import { Participante } from '../../models/participante.model';
 import { Liga } from "../../models/liga.model";
-import { DateTime } from "ionic-angular/components/datetime/datetime";
 
 @Component({
   selector: "page-novaliga",
@@ -80,21 +79,16 @@ export class NovaligaPage {
                                                       this.participanteService.authService.auth.auth.currentUser.uid,
                                                       codigosecreto);
 
-    console.log(this.ligaForm.value);
-
     let liga: Liga = new Liga(codigosecreto, 
                               Date.now(), 
                               codigosecreto, 
                               // "", 
                               formLiga.nome);      
                               
-  console.log(liga);
  
-   this.ligaService.create(liga).then(() => this.participanteService.create(participante).then(() => loading.dismiss().then(() => { this.presentToast();},
-                                                                        error => {console.log(error); } 
+   this.ligaService.create(liga).then(() => this.participanteService.create(participante).then(() => loading.dismiss().then(() => { this.presentToast();}
                                                                       )
                                           ).catch((error: Error) => {
-                                            console.log(error);
                                             loading.dismiss();
                                             this.showAlert(error.message);
                                           }));

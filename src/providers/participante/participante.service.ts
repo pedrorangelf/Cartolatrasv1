@@ -20,5 +20,17 @@ export class ParticipanteService {
     return this.af.list('/participantes', ref => ref.orderByChild('codigosecreto').equalTo(ligaid));
   }
 
+  buscarParticipanteById(id){
+    return this.af.object('/participantes/' + id);
+  }
+
+  pontuar(pontos, idparticipante){
+    return this.af.object('/participantes/' + idparticipante).update({pontos: pontos});
+  }
+
+remover(codigosecreto)
+{
+  return this.af.list('/participantes', ref => ref.orderByChild('codigosecreto').equalTo(codigosecreto)).remove();
+}
 
 }

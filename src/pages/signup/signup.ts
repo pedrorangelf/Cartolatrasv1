@@ -51,17 +51,14 @@ criarConta()
     }).then( newUser => { delete formUser.senha;
                           formUser.uid = this.authService.auth.auth.currentUser.uid;
                           this.userService.create(formUser).then(()=> loading.dismiss()
-                                                                             .then(() => { this.presentToast(); },
-                                                                                   error => { console.log(error); }
+                                                                             .then(() => { this.presentToast(); }
                                                                                   )
                                                                 ).catch((error: Error) => {
-                                                                  console.log(error);
                                                                   loading.dismiss();
                                                                   this.showAlert(error.message);
                                                                 });
                         }
             ).catch((error: Error) => {
-              console.log(error);
               loading.dismiss();
               this.showAlert(error.message);
             });
