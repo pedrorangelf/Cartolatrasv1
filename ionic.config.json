@@ -1,8 +1,8 @@
 {
   "name": "Cartolatras",
-  "app_id": "bf919450",
-  "type": "ionic-angular",
   "integrations": {
     "cordova": {}
-  }
+  },
+  "type": "ionic-angular",
+  "pro_id": "bf919450"
 }
